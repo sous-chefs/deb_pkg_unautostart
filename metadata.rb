@@ -1,5 +1,5 @@
 name 'deb_pkg_unautostart'
-version '0.1.0'
+version '0.1.1'
 maintainer 'Chris Roberts'
 maintainer_email 'chrisroberts.code@gmail.com'
 description 'Stop deb packages from starting processes'
