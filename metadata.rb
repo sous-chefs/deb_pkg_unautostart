@@ -1,10 +1,11 @@
 name 'deb_pkg_unautostart'
-version '0.1.0'
 maintainer 'Chef Software, Inc.'
 maintainer_email 'cookbooks@chef.io'
 license 'Apache 2.0'
 description 'Stop deb packages from starting services'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+version '0.1.0'
+
 supports 'ubuntu'
 supports 'debian'
 
