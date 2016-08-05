@@ -1,4 +1,6 @@
-# Deb Pkg Unautostart
+# deb_pkg_unautostart cookbook
+
+[![Build Status](https://travis-ci.org/chef-cookbooks/deb_pkg_unautostart.svg?branch=master)](http://travis-ci.org/chef-cookbooks/deb_pkg_unautostart) [![Cookbook Version](https://img.shields.io/cookbook/v/deb_pkg_unautostart.svg)](https://supermarket.chef.io/cookbooks/deb_pkg_unautostart)
 
 Debian packages like to auto start processes during install, with default configurations, generally not even close to the desired configuration. That's annoying. Lets make it less annoying.
 
