@@ -12,7 +12,7 @@ Debian packages like to auto start processes during install, with default config
 
 ### Chef
 
-- Chef 11+
+- Chef 12.1+
 
 ### Cookbooks
 
