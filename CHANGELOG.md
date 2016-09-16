@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of the deb_pkg_unautostart cookbook.
 
+## 2.0.0 (2016-09-15)
+
+- Testing updates
+- Require Chef 12.1+
+
 ## v1.0.0 (2016-08-05)
 
 - Moved this cookbook from Heavy Water to Chef for maintenance
