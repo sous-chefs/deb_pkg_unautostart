@@ -11,4 +11,4 @@ supports 'debian'
 source_url 'https://github.com/chef-cookbooks/deb_pkg_unautostart'
 issues_url 'https://github.com/chef-cookbooks/deb_pkg_unautostart/issues'
 
-chef_version '>= 12.1'
+chef_version '>= 12.15'
