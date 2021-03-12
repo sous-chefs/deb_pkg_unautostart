@@ -5,6 +5,7 @@ This file is used to list changes made in each version of the deb_pkg_unautostar
 ## Unreleased
 
 - Sous Chefs Adoption
+- Add InSpec test
 
 ## 2.0.0 (2016-09-15)
 
