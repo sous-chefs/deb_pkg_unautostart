@@ -2,6 +2,8 @@
 
 This file is used to list changes made in each version of the deb_pkg_unautostart cookbook.
 
+## Unreleased
+
 ## 2.1.0 - *2021-03-15*
 
 - Sous Chefs Adoption
