@@ -9,7 +9,7 @@ require 'spec_helper'
 describe 'deb_pkg_unautostart::default' do
   context 'When all attributes are default, on an unspecified platform' do
     let(:chef_run) do
-      runner = ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '16.04')
+      runner = ChefSpec::SoloRunner.new(platform: 'ubuntu', version: '20.04')
       runner.converge(described_recipe)
     end
 
