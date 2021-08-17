@@ -4,6 +4,8 @@ This file is used to list changes made in each version of the deb_pkg_unautostar
 
 ## Unreleased
 
+Standardise files with files in sous-chefs/repo-management
+
 ## 2.1.1 - *2021-06-01*
 
 ## 2.1.0 - *2021-03-15*
