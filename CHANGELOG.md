@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the deb_pkg_unautostart cookbook.
 
-## Unreleased
+## 2.1.3 - *2023-02-14*
 
 - Remove delivery folder
 
