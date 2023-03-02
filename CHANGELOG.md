@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the deb_pkg_unautostart cookbook.
 
-## Unreleased
+## 2.1.4 - *2023-03-02*
 
 - Remove delivery workflow
 - Update renovate configuration
