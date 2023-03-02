@@ -4,6 +4,10 @@ This file is used to list changes made in each version of the deb_pkg_unautostar
 
 ## Unreleased
 
+- Remove delivery workflow
+- Update renovate configuration
+- Use new worklflows
+
 ## 2.1.3 - *2023-02-14*
 
 - Remove delivery folder
