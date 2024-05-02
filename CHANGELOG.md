@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the deb_pkg_unautostart cookbook.
 
-## Unreleased
+## 2.1.12 - *2024-05-02*
 
 ## 2.1.11 - *2023-12-27*
 
