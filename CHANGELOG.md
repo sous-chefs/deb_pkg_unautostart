@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of the deb_pkg_unautostart cookbook.
 
+## [2.1.16](https://github.com/sous-chefs/deb_pkg_unautostart/compare/2.1.15...v2.1.16) (2025-10-15)
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#37](https://github.com/sous-chefs/deb_pkg_unautostart/issues/37)) ([55ad9ee](https://github.com/sous-chefs/deb_pkg_unautostart/commit/55ad9eefb472df644453af274d26c9a9150c408d))
+
 ## 2.1.4 - *2023-03-02*
 
 * Remove delivery workflow
