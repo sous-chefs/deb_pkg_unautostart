@@ -6,7 +6,7 @@
 [![OpenCollective](https://opencollective.com/sous-chefs/sponsors/badge.svg)](#sponsors)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Debian packages like to auto start processes during install, with default configurations, generally not even close to the desired configuration. That's annoying. Lets make it less annoying.
+Debian packages like to auto start processes during install, with default configurations, generally not even close to the desired configuration. This cookbook provides a custom resource that manages `/usr/sbin/policy-rc.d` so package installs can be staged without starting services prematurely.
 
 ## Maintainers
 
@@ -16,11 +16,12 @@ This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of
 
 ### Platforms
 
-- Debian/Ubuntu
+- Debian 12+
+- Ubuntu 24.04+
 
 ### Chef
 
-- Chef 12.1+
+- Chef 15.3+
 
 ### Cookbooks
 
@@ -28,21 +29,41 @@ This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of
 
 ## Usage
 
-Add to your run list, or include in a recipe, or how ever else you feel like getting a recipe compiled and converged:
+Declare `deb_pkg_unautostart_policy_rc_d` before the packages whose service autostart you want to suppress.
 
 ```ruby
-run_list("recipe[deb_pkg_unautostart]")
+deb_pkg_unautostart_policy_rc_d 'suppress package autostart'
+
+package 'nginx'
 ```
 
-There's even an option to get this dropped during the compile phase in cases where you can't get to the start of the run list, or you have packages that are being installed during the compile phase.
+When the package install happens during converge, declare the resource earlier in the run so `/usr/sbin/policy-rc.d` already exists before the package resource executes.
+
+### Compile-time package installation
+
+If another cookbook installs packages during compile time, create the policy script at compile time explicitly:
 
 ```ruby
-override_attributes(
-  :deb_pkg_unautostart => {
-    :compiletime => true
-  }
-)
+deb_pkg_unautostart_policy_rc_d 'suppress package autostart' do
+  compile_time true
+end
+
+package 'nginx'
 ```
+
+This replaces the legacy `node['deb_pkg_unautostart']['compiletime']` attribute with an explicit resource declaration at the call site, which makes ordering and side effects visible in the recipe that needs them.
+
+### Removing the managed policy
+
+Remove the script after package installation when autostart suppression is no longer needed:
+
+```ruby
+deb_pkg_unautostart_policy_rc_d 'suppress package autostart' do
+  action :delete
+end
+```
+
+For safety, the delete action only removes files created by this resource unless you set `force_delete true`.
 
 ## Contributors
 
