@@ -12,14 +12,14 @@ autostart during installation.
 
 ## Properties
 
-| Property       | Type               | Default                  | Description                                                      |
-|----------------|--------------------|--------------------------|------------------------------------------------------------------|
-| `path`         | String             | `'/usr/sbin/policy-rc.d'`| Location of the policy script.                                   |
-| `owner`        | String             | `'root'`                 | Owner of the managed file.                                       |
-| `group`        | String             | `'root'`                 | Group of the managed file.                                       |
-| `mode`         | String, Integer    | `'0755'`                 | Mode applied to the managed file.                                |
-| `force_delete` | true, false        | `false`                  | Remove the file even when it does not contain the managed marker.|
-| `compile_time` | true, false        | `false`                  | Common Chef resource property for creating the script at compile time. |
+| Property       | Type            | Default                   | Description                                                   |
+|----------------|-----------------|---------------------------|---------------------------------------------------------------|
+| `path`         | String          | `'/usr/sbin/policy-rc.d'` | Location of the policy script.                                |
+| `owner`        | String          | `'root'`                  | Owner of the managed file.                                    |
+| `group`        | String          | `'root'`                  | Group of the managed file.                                    |
+| `mode`         | String, Integer | `'0755'`                  | Mode applied to the managed file.                             |
+| `force_delete` | true, false     | `false`                   | Remove the file even when it does not contain the marker.     |
+| `compile_time` | true, false     | `false`                   | Create the script during compile time.                        |
 
 ## Examples
 
