@@ -1,21 +1,48 @@
+---
 driver:
   name: vagrant
+  customize:
+    memory: 1024
+
+transport:
+  max_wait_until_ready: 600
+  connection_retries: 10
+  connection_retry_sleep: 10
 
 provisioner:
-  name: chef_zero
+  name: chef_infra
+  product_name: chef
+  product_version: latest
+  channel: stable
+  chef_license: accept
   deprecations_as_errors: true
-  chef_license: accept-no-persist
 
 verifier:
   name: inspec
+  sudo: true
 
 platforms:
-  - name: debian-9
-  - name: debian-10
-  - name: ubuntu-18.04
-  - name: ubuntu-20.04
+  - name: debian-12
+  - name: ubuntu-24.04
+
+x-run_lists:
+  default: &default_run_list
+    - recipe[test::default]
+  remove: &remove_run_list
+    - recipe[test::remove]
+
+x-verifiers:
+  default: &default_verifier
+    inspec_tests:
+      - path: test/integration/default
+  remove: &remove_verifier
+    inspec_tests:
+      - path: test/integration/remove
 
 suites:
   - name: default
-    run_list:
-      - recipe[deb_pkg_unautostart::default]
+    run_list: *default_run_list
+    verifier: *default_verifier
+  - name: remove
+    run_list: *remove_run_list
+    verifier: *remove_verifier

@@ -1,0 +1,7 @@
+---
+name: remove
+title: Remove resource tests
+maintainer: Sous Chefs
+license: Apache-2.0
+summary: Verifies the managed policy-rc.d file can be removed
+version: 1.0.0

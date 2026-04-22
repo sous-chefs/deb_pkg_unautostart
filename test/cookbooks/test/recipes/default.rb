@@ -1,0 +1,1 @@
+deb_pkg_unautostart_policy_rc_d 'suppress package autostart'
