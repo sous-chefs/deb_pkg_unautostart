@@ -2,6 +2,17 @@
 
 This file is used to list changes made in each version of the deb_pkg_unautostart cookbook.
 
+## [3.0.0](https://github.com/sous-chefs/deb_pkg_unautostart/compare/v2.1.16...v3.0.0) (2026-04-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate cookbook to custom resources ([#43](https://github.com/sous-chefs/deb_pkg_unautostart/issues/43))
+
+### Features
+
+* migrate cookbook to custom resources ([#43](https://github.com/sous-chefs/deb_pkg_unautostart/issues/43)) ([070e308](https://github.com/sous-chefs/deb_pkg_unautostart/commit/070e308b2f29f8305dcafc697e596ff6438e0d17))
+
 ## [2.1.16](https://github.com/sous-chefs/deb_pkg_unautostart/compare/2.1.15...v2.1.16) (2025-10-15)
 
 ### Bug Fixes
