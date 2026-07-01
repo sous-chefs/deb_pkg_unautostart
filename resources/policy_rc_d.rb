@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 unified_mode true
+provides :deb_pkg_unautostart_policy_rc_d
 
 property :path, String, default: '/usr/sbin/policy-rc.d'
 property :owner, String, default: 'root'
