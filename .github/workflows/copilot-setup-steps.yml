@@ -19,7 +19,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v7
       - name: Install CINC Workstation
-        uses: sous-chefs/.github/.github/actions/install-workstation@8.0.4
+        uses: sous-chefs/.github/.github/actions/install-workstation@9.0.0
         with:
           channel: stable
           version: '24'
